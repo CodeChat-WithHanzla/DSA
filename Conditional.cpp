@@ -1,13 +1,11 @@
 #include <iostream>
 using namespace std;
 void characterSpecifier(char ch);
-void sumOfEven(int n);
+int sumOfEven(int n);
+float fahrenheitToCelsius(int F);
 
-int main()
-{
+int main(){
 
-    int n = 10;
-    sumOfEven(n);
 }
 
 void characterSpecifier(char ch)
@@ -21,7 +19,7 @@ void characterSpecifier(char ch)
     else
         cout << "Unknown to me ! " << endl;
 }
-void sumOfEven(int n)
+int sumOfEven(int n)
 {
     int i = 1, sum = 0;
     while (i <= n)
@@ -30,5 +28,10 @@ void sumOfEven(int n)
             sum += i;
         i++;
     }
-    cout << "Sum of even numbers from 1" << " to " << n << " is : " << sum << endl;
+    return sum;
+}
+float fahrenheitToCelsius(int F)
+{
+    float celsius = (5.0 / 9.0) * (F - 32);
+    return celsius;
 }
