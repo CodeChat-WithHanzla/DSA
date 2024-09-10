@@ -1,10 +1,18 @@
 #include <iostream>
 using namespace std;
+void characterSpecifier(char &ch);
 int main()
 {
     char ch;
     cout << "Enter the Character : ";
     cin >> ch;
+    characterSpecifier(ch);
+}
+
+
+
+void characterSpecifier(char &ch)
+{
     if (ch >= 'a' && ch <= 'z')
         cout << "Lower Case" << endl;
     else if (ch >= 'A' && ch <= 'Z')
