@@ -57,6 +57,36 @@ public:
         }
         return true;
     }
+    void patternPrintingUsingWhileLoop01(int n)
+    {
+        int i = 0;
+        while (i < n)
+        {
+            int j = 0;
+            while (j < n)
+            {
+                cout << "*";
+                j++;
+            }
+            cout << endl;
+            i++;
+        }
+    }
+    void patternPrintingUsingWhileLoop02(int n)
+    {
+        int i = 1;
+        while (i <= n)
+        {
+            int j = 0;
+            while (j <= n)
+            {
+                cout<<i<<" ";
+                j++;
+            }
+            cout<<endl;
+            i++;
+        }
+    }
 };
 
 int main()
