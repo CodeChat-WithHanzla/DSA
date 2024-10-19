@@ -39,7 +39,7 @@ public:
             }
             else
             {
-                while (!st.empty() && precedance(ch) <= precedance(st.top()))
+                while (!st.empty() && precedance(ch) < precedance(st.top()))
                 {
                     result += st.top();
                     st.pop();
@@ -58,7 +58,7 @@ public:
 };
 int main()
 {
-    string s = "(A-B/C)*(A/K-L)";
+    string s = "A+B-C*D";
     Solution obj;
     string res = obj.infixToPrefix(s);
     cout << res;
