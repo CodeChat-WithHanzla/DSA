@@ -96,6 +96,19 @@ public:
         temp->next = toDelete->next;
         delete toDelete;
     }
+    void reverse()
+    {
+        Node *current = head;
+        Node *prev = nullptr;
+        while (current)
+        {
+            Node *next = current->next;
+            current->next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
     void menu()
     {
         int choice, value, position;
@@ -107,7 +120,8 @@ public:
             cout << "2. Insert at Start\n";
             cout << "3. Print List\n";
             cout << "4. Get List Size\n";
-            cout << "5. Exit\n";
+            cout << "5. Reverse the List\n";
+            cout << "6. Exit\n";
             cout << "Enter your choice: ";
             cin >> choice;
 
@@ -133,8 +147,11 @@ public:
             case 4:
                 cout << "List Size: " << size() << endl;
                 break;
-
             case 5:
+                cout << "Reversing the List..." << endl;
+                reverse();
+                break;
+            case 6:
                 cout << "Exiting program.\n";
                 break;
 
